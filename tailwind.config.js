@@ -1,4 +1,7 @@
 // tailwind.config.js
+
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   future: {
     purgeLayersByDefault: true,
@@ -12,5 +15,12 @@ module.exports = {
     require("@tailwindcss/typography"),
     // ...
   ],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['"Inter var"', ...defaultTheme.fontFamily.sans],
+      },
+    },
+  },
   // ...
 };

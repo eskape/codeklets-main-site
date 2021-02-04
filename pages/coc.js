@@ -18,7 +18,7 @@ export default function CoC({ page, preview }) {
   );
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({}) {
   const page = getPageContent("coc");
 
   const content = await markdownToHtml(page.content || "");
